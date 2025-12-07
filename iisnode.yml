@@ -1,0 +1,25 @@
+# iisnode configuration for Azure App Service and IIS
+# This file configures how Node.js runs under IIS
+
+# Logging configuration
+loggingEnabled: true
+logDirectory: iisnode
+devErrorsEnabled: false
+
+# Node.js configuration  
+nodeProcessCommandLine: "node"
+nodeProcessCountPerApplication: 1
+
+# Performance settings
+maxConcurrentRequestsPerProcess: 1024
+maxNamedPipeConnectionRetry: 100
+namedPipeConnectionRetryDelay: 250
+
+# Recycling settings
+recycleSignalEnabled: true
+
+# Watchdog settings
+enableXFF: false
+
+# Environment
+promoteServerVars: LOGON_USER,HTTP_X_FORWARDED_FOR,AI_INTEGRATIONS_OPENAI_BASE_URL,AI_INTEGRATIONS_OPENAI_API_KEY
